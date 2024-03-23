@@ -131,8 +131,6 @@ class HBNBCommand(cmd.Cmd):
             if len(args) != 2:
                 continue
             key, value = args[0], args[1][1:-1]
-            if not hasattr(new_instance, key):
-                continue
             value = value.replace("_", " ")
             setattr(new_instance, key, value)
         storage.save()
